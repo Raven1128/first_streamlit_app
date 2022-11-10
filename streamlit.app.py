@@ -44,3 +44,6 @@ my_cur.execute("select * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains")
 streamlit.dataframe(my_data_rows)
+
+#allow the end user to add fruit to the list
+add_my_fruit=streamlit.multiselect("Add some fruits:",list(my_fruit_list.index),['Avocado','Strawberries'])
